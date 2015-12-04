@@ -6,15 +6,16 @@ Advent of Code in Befunge
 
 [Solution](day01.bf)
 
-```
-~:1+!#@_")"-:!+-:.
-```
-
 Note: input must not end in a newline.
 
-Works by subtracting the ASCII value of `)` from the input character, resulting
-in `-1` for `(` and `0` for `)`. It then adds the logical NOT of that result to
-itself, so it is now either `-1` or `1`, which is then added to the total sum.
+![Solution Code](img/day01.bf.png)
+
+1. Blue: standard input loop, exiting on EOF (-1).
+2. Purple: subtract ASCII value of `)` from input, resulting in `-1` for `(`
+   and `0` for `)`.
+3. Red: add the logical NOT of the result to itself, resulting in `-1` for `(`
+   and `1` for `)`.
+4. Yellow: subtract the result from the total and output it.
 
 ## [Day 2: I Was Told There Would Be No Math][day2]
 

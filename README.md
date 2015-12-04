@@ -41,9 +41,30 @@ Note: input must not end in a newline.
 
 [Solution](day03.bf)
 
-Note: none-standard Befunge, 255x255 program space.
+Note: non-standard Befunge, 255x255 program space.
 
-TODO: Explanation
+![Solution Code](img/day03.bf.png)
+
+1. Blue: push starting coordinates `(128, 128)`, the center of a 255x255
+   program space.
+2. Purple: temporarily store coordinates under blue region, use them to write a
+   `1` into the program space, then restore the coordinates to the stack.
+3. Red: input loop checking for newline (10).
+4. Yellow: compare input to "<", leaving the difference on the stack.
+5. Green: compare input to 2, the difference between "<" and ">", again leaving
+   the difference on the stack.
+6. Cyan: compare input to 32, the difference between ">" and "^", again leaving
+   the difference on the stack. It is assumed that any other value is "v".
+7. Pink: pop input value and add or subtract 1 to the X or Y coordinate.
+8. Orange: pop input and coordinates to empty the stack and enter the gray
+   area.
+9. Gray: region of program space populated with `1` instructions by the input
+   loop, then executed.
+10. Lime: sum the entire stack full of 1s, output the result and exit.
+
+Map of the houses Santa visited in program space:
+
+![Program Space](img/day03.png)
 
 [day1]: http://adventofcode.com/day/1
 [day2]: http://adventofcode.com/day/2

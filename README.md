@@ -21,16 +21,21 @@ Note: input must not end in a newline.
 
 [Solution](day02.bf)
 
-```
->~:1+!#@_:25*-#v_$:::::84p92*1+4p55*4p57*1+4p86*4p552**2+4p::::24p74p82*2+4p5v>
-^   0$_v#!-"x":<            vp4+3**255p4*67p4+2*75p4+1*55p41::::p4+7*85p4+3*8<
-^      >"0"-\25**+
-                            >                                                  v
-"lw"*:"wh"*`!#v_$"wh"*>:"hl"*`!#v_$"hl"*>"lw"*"wh"*"hl"*++2*++:.0             ^>
-              >       ^         >       ^
-```
+![Solution Code](img/day02.bf.png)
 
-TODO: Explanation
+1. Blue: standard input loop, exiting on EOF (-1).
+2. Purple: check for newline (10).
+3. Red: check for "x".
+4. Yellow: on "x", discard the input and push 0 for the next number.
+5. Green: subtract ASCII value of "0" to convert input to number. Multiply
+   existing number by 10 and add the input number.
+6. Cyan: on newline, the length, width and height will be on the stack. Replace
+   each "l", "w", "h" in the pink and orange regions with their values.
+7. Pink: find the smallest side by calculating each and performing greater-than
+   comparisons.
+8. Orange: calculate the areas of each side, add them, and multiply by two. Add
+   the area of the smallest side. Add the area to the total, output, then push
+   0 for the next input value.
 
 ## [Day 3: Perfectly Spherical Houses in a Vacuum][day3]
 

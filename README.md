@@ -2,6 +2,52 @@
 
 Advent of Code in Befunge
 
+### Befunge Summary
+
+[Befunge][befunge] is an esoteric two-dimensional stack language in which the
+program counter travels around the 80x25 program space. In addition to the
+stack, program space itself can be modified at runtime.
+
+| Instruction | Description                    |
+| ----------- | ------------------------------ |
+| `>`         | Right                          |
+| `<`         | Left                           |
+| `^`         | Up                             |
+| `v`         | Down                           |
+| `?`         | Random direction               |
+| `#`         | Jump over                      |
+| `0` ... `9` | Push number                    |
+| `"`         | Toggle string mode             |
+| `:`         | Dup                            |
+| `\`         | Swap                           |
+| `$`         | Pop                            |
+| `+`         | Add                            |
+| `-`         | Subtract                       |
+| `*`         | Multiply                       |
+| `/`         | Divide                         |
+| `%`         | Modulo                         |
+| `!`         | Logical NOT                    |
+| `` ` ``     | Greater than                   |
+| `_`         | Horizontal if                  |
+| `|`         | Vertical if                    |
+| `g`         | Get                            |
+| `p`         | Put                            |
+| `&`         | Input number                   |
+| `~`         | Input character                |
+| `.`         | Output number                  |
+| `,`         | Output character               |
+| `@`         | Exit                           |
+| other       | In string mode, push character |
+
+[befunge]: http://catseye.tc/node/Befunge-93.html
+
+### Development
+
+Solutions run with [befrust][befrust] and debugged with [befungee][befungee].
+
+[befrust]: https://github.com/programble/befrust
+[befungee]: https://github.com/programble/befungee
+
 ## [Day 1: Not Quite Lisp][day1]
 
 [Solution](day01.bf)
@@ -66,6 +112,16 @@ Map of the houses Santa visited in program space:
 
 ![Program Space](img/day03.png)
 
+## [Day 4: The Ideal Stocking Stuffer][day4]
+
+No solution yet.
+
+## [Day 5: Doesn't He Have Intern-Elves For This?][day5]
+
+No solution yet.
+
 [day1]: http://adventofcode.com/day/1
 [day2]: http://adventofcode.com/day/2
 [day3]: http://adventofcode.com/day/3
+[day4]: http://adventofcode.com/day/4
+[day5]: http://adventofcode.com/day/5
